@@ -1,5 +1,9 @@
 from .app import app
+from flask import render_template
 
 @app.route("/")
 def home():
-    return "<h1>Hello_World</h1>"
+    return render_template(
+        "home.html",
+        title= "HELLO WORLD !",
+        names=["Pierre", "Paul", "Corinne"])
